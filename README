@@ -1,0 +1,17 @@
+jpcache v1.1.1
+http://www.weirdpier.com/jpcache/
+
+Copyright 2001 Jean-Pierre Deckers <jpcache@weirdpier.com>
+  
+  Summary:
+    jpcache is a lightweight, full page caching system for PHP, thus
+    reducing server-load, as pages are generated less often.
+    It also uses gzip content-encodig and ETag-headers, which results
+    in around 80% in traffic-saving for php-pages.
+    You can choose to store your files in a local dir or in a database.
+  
+  Features:
+    - Caches full pages.
+    - When not modified since last visit, sends 304 response
+    - When modified or first visit, sends gzipped content if possible, 
+      else uncompressed content

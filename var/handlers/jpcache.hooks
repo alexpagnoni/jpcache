@@ -1,0 +1,18 @@
+<?php
+if ( !defined( 'JPCACHE_HOOKS' ) )
+{
+define( 'JPCACHE_HOOKS', true );
+
+function jpcache_page_generation( &$obj, $args )
+{
+    $cachetimeout = 900;
+
+    OpenLibrary( 'jpcache.library' );
+
+    jpCacheStart();
+
+    return HOOK_RESULT_OK;
+}
+
+}
+?>

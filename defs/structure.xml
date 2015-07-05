@@ -1,0 +1,50 @@
+<?xml version='1.0'?>
+<structure>
+
+	<catalog
+        	name="jpcache_root_jpcache"
+                file="jpcache_root_jpcache.catalog"/>
+
+	<catalog
+        	name="jpcache_root_jpcache_en"
+                file="jpcache_root_jpcache_en.catalog"/>
+
+	<catalog
+        	name="jpcache_root_jpcache_it"
+                file="jpcache_root_jpcache_it.catalog"/>
+
+	<configurationfile
+        	name="jpcache.cfg"
+                file="jpcache.cfg"
+                keep="true"/>
+
+	<tempdir
+        	name="jpcache"
+                file="jpcache"/>
+
+	<library
+        	name="jpcache"
+                file="jpcache.library"/>
+
+	<hookhandler
+        	name="jpcache"
+                file="jpcache.hooks"/>
+
+	<hook
+        	name="jpcache_page_generation"
+                file="jpcache_page_generation"
+                functionmodule="magellan"
+                function="page"
+                event="generation"
+                hookhandler="jpcache.hooks"
+                hookfunction="jpcache_page_generation"/>
+
+	<rootpage
+        	name="jpcache"
+                file="jpcache.php"
+                catalog="jpcache_root_jpcache"
+                category="modsettings"
+                themeicon="cache"
+                themeicontype="apps"/>
+
+</structure>

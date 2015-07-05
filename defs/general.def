@@ -1,0 +1,39 @@
+# Module short name
+MODULEIDNAME         = jpcache
+
+# Module version number
+MODULEVERSION        = 1.1.1-1
+
+# Module release date
+MODULEDATE           = 2002/10/18
+
+# Module long description
+MODULEDESCRIPTION    = A lightweight, full page caching system for Magellan and PHP scripts.
+
+# Module dependencies
+MODULEDEPENDENCIES   = ampoliros[3.1.0],magellan[3.0.1],zlib.extension
+
+# Module suggestions
+MODULESUGGESTIONS    = 
+
+MODULE_AUTHOR        = Jean-Pierre Deckers, Alex Pagnoni
+
+MODULE_AUTHOR_EMAIL  = jpcache@weirdpier.com
+
+MODULE_AUTHOR_SITE   = http://www.weirdpier.com/jpcache/
+
+MODULE_SUPPORT_EMAIL = support@ampoliros.com
+
+MODULE_BUGS_EMAIL    = bugs@ampoliros.com
+
+MODULE_COPYRIGHT     = Copyright 2001 Jean-Pierre Deckers <jpcache@weirdpier.com>
+
+MODULE_LICENSE       = GPL
+
+MODULE_LICENSE_FILE  = LICENSE
+
+MODULE_MAINTAINER    = Alex Pagnoni - Solarix
+
+MODULE_MAINTAINER_EMAIL = alex@ampoliros.com
+
+MODULE_CATEGORY      = web

@@ -1,0 +1,52 @@
+jpcache v1.1.1
+http://www.weirdpier.com/jpcache/
+
+Copyright 2001 Jean-Pierre Deckers <jpcache@weirdpier.com>
+  
+  Summary:
+    jpcache is a lightweight, full page caching system for PHP, thus
+    reducing server-load, as pages are generated less often.
+    It also uses gzip content-encodig and ETag-headers, which results
+    in around 80% in traffic-saving for php-pages.
+    You can choose to store your files in a local dir or in a database.
+  
+  Features:
+    - Caches full pages.
+    - When not modified since last visit, sends 304 response
+    - When modified or first visit, sends gzipped content if possible, 
+      else uncompressed content
+    - You can choose between file or MySQL based storage
+      
+  Requirements:
+    - PHP4.0.1+ with Zlib enabled
+    - MySQL when using the sql-version
+
+  Release-notes for v1.1.1:
+    - Now compatible with php 4.0.5
+      
+  File vs. sql-storage:
+    Although the file-storage seems to be faster, you might prefer the 
+    sql-version, as it has much faster garbagecollection.
+
+  Installation and usage:
+    0) Decide whether to go for the file- or database-storage. Read
+       'jpcache-sql.php' for 'jpcache.inc' when using database-storage.
+    1) Edit jpcache.inc and change the configurationsettings
+    2) If you use the sql-version, create the database that is used for storing
+       the cachedata (default name: "jpcache"). Within this database, create 
+       the required table as provided in script.sql.
+       You can use the mysql-client for this:
+       mysql <db-name> < script.sql
+       or you can use phpMyAdmin <http://phpwizard.net/phpMyAdmin> to read
+       in the dump.
+    3) Start your php-file with <? $cachetimeout=<X>; include "jpcache.inc" ?>
+       By default, pages will be cached for 900 seconds.
+       - Setting <X> to -1 will disable caching and will only do content 
+       encoding. Use this for pages which can not be cached, like personalized
+       pages or with content that is always changing. Also when the page is 
+       returning headers (like cookies in php), set the cachetimeout to -1, as
+       header-information is not cached.
+       - Setting <X> to 0 will create a non-expiring cache. This can be used 
+       for pages that are not dynamic in content, but are heavy to generate.
+     
+  Jean-Pierre 'Pier' Deckers

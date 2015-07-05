@@ -1,0 +1,27 @@
+jpcache				= JpCache
+
+jpcache.title			= JpCache
+erase.confirm			= Si vuole veramente eliminare l'intero contenuto della cache?
+default.button			= Impostazioni
+erasecache.button		= Elimina la cache
+stats.button			= Statistiche
+
+# main_default
+
+cachetime.label			= Tempo di validità della cache
+cacheon.label			= Cache attiva
+usegzip.label			= Output compresso
+cachepost.label			= Cache dei POST
+setprefs.submit			= Applica
+
+# main_stats
+
+cacheobjects.label		= Oggetti in cache
+
+# action_setprefs
+
+prefs_set.status		= Impostazioni salvate.
+
+# action_erasecache
+
+cache_erased.status		= Cache eliminata.
